@@ -48,5 +48,7 @@ val OutlineDark = Color(0xFF8C938C)
 
 // Custom Accent Highlights
 val IslamicGoldAccent = Color(0xFFD4AF37)
+val IslamicGoldLight = Color(0xFFFFF0C7)
+val IslamicGoldDark = Color(0xFF5A4300)
 val AyahCardBgLight = Color(0xFFF1F8F4)
 val AyahCardBgDark = Color(0xFF17251E)
