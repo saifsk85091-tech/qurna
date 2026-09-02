@@ -3,7 +3,26 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <path
-        android:fillColor="#D4AF37"
-        android:pathData="M30,30h48v48h-48z"/>
+    <group
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:translateX="21.6"
+        android:translateY="21.6">
+        <!-- Open Book (Quran) Base -->
+        <path
+            android:fillColor="#D4AF37"
+            android:pathData="M18,34 C18,34 32,28 54,34 C76,28 90,34 90,34 L90,80 C90,80 76,74 54,80 C32,74 18,80 18,80 Z" />
+        <path
+            android:fillColor="#0D5C3A"
+            android:pathData="M52,35 L56,35 L56,80 L52,80 Z" />
+        <!-- Quran Page Details -->
+        <path
+            android:strokeColor="#0D5C3A"
+            android:strokeWidth="1.5"
+            android:pathData="M24,44 C34,40 44,42 50,45 M24,54 C34,50 44,52 50,55 M24,64 C34,60 44,62 50,65 M58,45 C64,42 74,40 84,44 M58,55 C64,52 74,50 84,54 M58,65 C64,62 74,60 84,64" />
+        <!-- Crescent and Star -->
+        <path
+            android:fillColor="#F6E05E"
+            android:pathData="M54,12 C47.37,12 42,17.37 42,24 C42,30.63 47.37,36 54,36 C50.5,34.5 48,31 48,27 C48,22 51.5,18 56,17 C55.35,16.9 54.68,12 54,12 Z" />
+    </group>
 </vector>
