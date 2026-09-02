@@ -79,15 +79,15 @@ export const HADITH_BOOKS: HadithBook[] = [
     description: 'ইসলামের ইতিহাসের প্রথম দিকের সবচেয়ে নির্ভরযোগ্য হাদীস ও ফিকহ সংকলন।'
   },
   {
-    id: 'riyadus_salihin',
-    name: 'رياض الصالحين',
-    banglaName: 'রিয়াদুস সালেহীন',
-    englishName: 'Riyad as-Salihin',
-    author: 'ইমাম মুহিউদ্দীন ইয়াহইয়া আন-নববী (রহ.)',
-    totalHadith: 1896,
-    chaptersCount: 19,
+    id: 'musnad_ahmad',
+    name: 'مسند أحمد',
+    banglaName: 'মুসনাদে আহমাদ',
+    englishName: 'Musnad Ahmad',
+    author: 'ইমাম আহমদ ইবনে হাম্বল (রহ.)',
+    totalHadith: 27647,
+    chaptersCount: 85,
     color: 'emerald',
-    description: 'দৈনন্দিন ইসলামিক চরিত্র, আখলাক ও আমলের শ্রেষ্ঠ হাদিস সংকলন।'
+    description: 'হাদিসের অন্যতম বিশালাকার বিশ্বকোষ সংকলন, যা সাহাবীদের বর্ণনাক্রম অনুযায়ী সাজানো।'
   }
 ];
 
@@ -107,24 +107,47 @@ export const HADITH_CHAPTERS: Record<string, HadithChapter[]> = {
     { id: 102, bookId: 'muslim', chapterNumber: 2, banglaName: 'পবিত্রতা ও তাহারাত', arabicName: 'كتاب الطهارة', hadithCount: 140 },
     { id: 103, bookId: 'muslim', chapterNumber: 3, banglaName: 'সালাত / নামায', arabicName: 'كتاب الصلاة', hadithCount: 300 },
     { id: 104, bookId: 'muslim', chapterNumber: 4, banglaName: 'মসজিদ ও নামাজের স্থান', arabicName: 'كتاب المساجد', hadithCount: 180 },
-    { id: 105, bookId: 'muslim', chapterNumber: 5, banglaName: 'যাকাত ও সাদাকাহ', arabicName: 'كتاب الزكاة', hadithCount: 220 }
+    { id: 105, bookId: 'muslim', chapterNumber: 5, banglaName: 'যাকাত ও সাদাকাহ', arabicName: 'كتاب الزكاة', hadithCount: 220 },
+    { id: 106, bookId: 'muslim', chapterNumber: 6, banglaName: 'সিয়াম / রোজা', arabicName: 'كتاب الصيام', hadithCount: 215 }
+  ],
+  abudawood: [
+    { id: 401, bookId: 'abudawood', chapterNumber: 1, banglaName: 'পবিত্রতা ও তাহারাত পর্ব', arabicName: 'كتاب الطهارة', hadithCount: 390 },
+    { id: 402, bookId: 'abudawood', chapterNumber: 2, banglaName: 'সালাত / নামাজ অধ্যায়', arabicName: 'كتاب الصلاة', hadithCount: 1160 },
+    { id: 403, bookId: 'abudawood', chapterNumber: 3, banglaName: 'যাকাত পর্ব', arabicName: 'كتاب الزكاة', hadithCount: 210 },
+    { id: 404, bookId: 'abudawood', chapterNumber: 4, banglaName: 'সিয়াম / রোজা', arabicName: 'كتاب الصوم', hadithCount: 154 }
   ],
   tirmidhi: [
     { id: 201, bookId: 'tirmidhi', chapterNumber: 1, banglaName: 'পবিত্রতা অধ্যায়', arabicName: 'أبواب الطهارة', hadithCount: 148 },
     { id: 202, bookId: 'tirmidhi', chapterNumber: 2, banglaName: 'সালাত পর্ব', arabicName: 'أبواب الصلاة', hadithCount: 250 },
     { id: 203, bookId: 'tirmidhi', chapterNumber: 3, banglaName: 'সদকা ও দান', arabicName: 'أبواب الزكاة', hadithCount: 95 },
-    { id: 204, bookId: 'tirmidhi', chapterNumber: 4, banglaName: 'সিয়াম / রোজা', arabicName: 'أبواب الصوم', hadithCount: 110 }
+    { id: 204, bookId: 'tirmidhi', chapterNumber: 4, banglaName: 'সিয়াম / রোজা', arabicName: 'أبواب الصوم', hadithCount: 110 },
+    { id: 205, bookId: 'tirmidhi', chapterNumber: 5, banglaName: 'সুনান ও উত্তম চরিত্র (আখলাক)', arabicName: 'أبواب البر والصلة', hadithCount: 120 }
   ],
-  riyadus_salihin: [
-    { id: 301, bookId: 'riyadus_salihin', chapterNumber: 1, banglaName: 'ইখলাস ও নিয়ত', arabicName: 'باب الإخلاص وإحضار النية', hadithCount: 12 },
-    { id: 302, bookId: 'riyadus_salihin', chapterNumber: 2, banglaName: 'তাওবা ও অনুশোচনা', arabicName: 'باب التوبة', hadithCount: 18 },
-    { id: 303, bookId: 'riyadus_salihin', chapterNumber: 3, banglaName: 'ধৈর্য ও সবর', arabicName: 'باب الصبر', hadithCount: 29 },
-    { id: 304, bookId: 'riyadus_salihin', chapterNumber: 4, banglaName: 'সততা ও সত্যবাদিতা', arabicName: 'باب الصدق', hadithCount: 10 }
+  nasai: [
+    { id: 501, bookId: 'nasai', chapterNumber: 1, banglaName: 'পবিত্রতা ও তাহারাত পর্ব', arabicName: 'كتاب الطهارة', hadithCount: 325 },
+    { id: 502, bookId: 'nasai', chapterNumber: 2, banglaName: 'পানি ব্যবহারের নিয়ম', arabicName: 'كتاب المياه', hadithCount: 50 },
+    { id: 503, bookId: 'nasai', chapterNumber: 3, banglaName: 'সালাতের সময়সূচি', arabicName: 'كتاب المواقيت', hadithCount: 110 },
+    { id: 504, bookId: 'nasai', chapterNumber: 4, banglaName: 'আজান ও ইকামত', arabicName: 'كتاب الأذان', hadithCount: 75 }
+  ],
+  ibnmajah: [
+    { id: 601, bookId: 'ibnmajah', chapterNumber: 1, banglaName: 'সুন্নাহর অনুসরণ পর্ব', arabicName: 'كتاب المقدمة', hadithCount: 266 },
+    { id: 602, bookId: 'ibnmajah', chapterNumber: 2, banglaName: 'তাহারাত ও ওযু', arabicName: 'كتاب الطهارة وسننها', hadithCount: 395 },
+    { id: 603, bookId: 'ibnmajah', chapterNumber: 3, banglaName: 'সালাত ও জামায়াত', arabicName: 'كتاب إقامة الصلاة والسنة فيها', hadithCount: 740 }
+  ],
+  muwatta: [
+    { id: 701, bookId: 'muwatta', chapterNumber: 1, banglaName: 'সালাতের সময়সমূহ', arabicName: 'وقوت الصلاة', hadithCount: 31 },
+    { id: 702, bookId: 'muwatta', chapterNumber: 2, banglaName: 'পবিত্রতা অর্জন', arabicName: 'الطهارة', hadithCount: 115 },
+    { id: 703, bookId: 'muwatta', chapterNumber: 3, banglaName: 'রমজানের সিয়াম', arabicName: 'الصيام', hadithCount: 60 }
+  ],
+  musnad_ahmad: [
+    { id: 801, bookId: 'musnad_ahmad', chapterNumber: 1, banglaName: 'খুলাফায়ে রাশেদীনের হাদিস', arabicName: 'مسند الخلفاء الراشدين', hadithCount: 580 },
+    { id: 802, bookId: 'musnad_ahmad', chapterNumber: 2, banglaName: 'আশারায়ে মুবাশশারার হাদিস', arabicName: 'مسند العشرة المبشرين بالجنة', hadithCount: 420 },
+    { id: 803, bookId: 'musnad_ahmad', chapterNumber: 3, banglaName: 'আবদুল্লাহ ইবনে মাসউদের মুসনাদ', arabicName: 'مسند عبد الله بن مسعود', hadithCount: 950 }
   ]
 };
 
 export const HADITH_LIST: HadithItem[] = [
-  // Sahih Bukhari Hadiths
+  // 1. Sahih Bukhari Hadiths
   {
     id: 1,
     bookId: 'bukhari',
@@ -181,7 +204,7 @@ export const HADITH_LIST: HadithItem[] = [
     grade: 'সহীহ'
   },
 
-  // Sahih Muslim Hadiths
+  // 2. Sahih Muslim Hadiths
   {
     id: 101,
     bookId: 'muslim',
@@ -216,7 +239,31 @@ export const HADITH_LIST: HadithItem[] = [
     grade: 'সহীহ'
   },
 
-  // Jami at-Tirmidhi Hadiths
+  // 3. Sunan Abu Dawood
+  {
+    id: 401,
+    bookId: 'abudawood',
+    chapterId: 401,
+    hadithNumber: 84,
+    arabicText: 'لاَ تُقْبَلُ صَلاَةُ مَنْ أَحْدَثَ حَتَّى يَتَوَضَّأَ.',
+    banglaTranslation: 'যে ব্যক্তির অজু ভঙ্গ হয়েছে, পুনরায় অজু না করা পর্যন্ত তার কোনো সালাত কবুল করা হয় না।',
+    narrator: 'হযরত আবু হুরায়রা (রা.)',
+    reference: 'সুনান আবু দাউদ, হাদিস নং ৮৪',
+    grade: 'সহীহ'
+  },
+  {
+    id: 402,
+    bookId: 'abudawood',
+    chapterId: 402,
+    hadithNumber: 495,
+    arabicText: 'مُرُوا أَوْلاَدَكُمْ بِالصَّلاَةِ وَهُمْ أَبْنَاءُ سَبْعِ سِنِينَ، وَاضْرِبُوهُمْ عَلَيْهَا وَهُمْ أَبْنَاءُ عَشْرٍ، وَفَرِّقُوا بَيْنَهُمْ فِي الْمَضَاجِعِ.',
+    banglaTranslation: 'তোমাদের সন্তানদের বয়স সাত বছর হলে তাদের সালাত (নামাজ) আদায়ের নির্দেশ দাও এবং দশ বছর বয়সে (নামাজ না পড়লে) শাসন করো, আর তাদের শোবার বিছানা পৃথক করে দাও।',
+    narrator: 'হযরত আমর ইবনে শুআইব তাঁর পিতা হতে এবং তিনি তাঁর দাদা (রা.) থেকে',
+    reference: 'সুনান আবু দাউদ, হাদিস নং ৪৯৫',
+    grade: 'সহীহ'
+  },
+
+  // 4. Jami at-Tirmidhi Hadiths
   {
     id: 201,
     bookId: 'tirmidhi',
@@ -251,16 +298,55 @@ export const HADITH_LIST: HadithItem[] = [
     grade: 'সহীহ'
   },
 
-  // Riyad as-Salihin
+  // 5. Sunan an-Nasa'i
   {
-    id: 301,
-    bookId: 'riyadus_salihin',
-    chapterId: 301,
-    hadithNumber: 12,
-    arabicText: 'إِنَّ اللَّهَ لا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ، وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ.',
-    banglaTranslation: 'নিশ্চয়ই আল্লাহ তাআলা তোমাদের বাহ্যিক আকৃতি ও ধন-সম্পদের দিকে তাকান না; বরং তিনি দৃষ্টি দেন তোমাদের অন্তরের অবস্থা এবং তোমাদের কর্মের দিকে।',
+    id: 501,
+    bookId: 'nasai',
+    chapterId: 501,
+    hadithNumber: 1,
+    arabicText: 'إِذَا اسْتَيْقَظَ أَحَدُكُمْ مِنْ نَوْمِهِ فَلا يَغْمِسْ يَدَهُ فِي الإِنَاءِ حَتَّى يَغْسِلَهَا ثَلاثًا، فَإِنَّهُ لا يَدْرِي أَيْنَ بَاتَتْ يَدُهُ.',
+    banglaTranslation: 'তোমাদের কেউ যখন ঘুম থেকে জাগে, তখন সে যেন তিনবার হাত ধৌত করার পূর্বে পাত্রের পানিতে হাত না ডুবায়। কারণ সে জানে না রাতের বেলা তার হাত কোথায় ছিল।',
     narrator: 'হযরত আবু হুরায়রা (রা.)',
-    reference: 'রিয়াদুস সালেহীন, হাদিস নং ১২',
+    reference: 'সুনান আন-নাসায়ী, হাদিস নং ১',
+    grade: 'সহীহ'
+  },
+
+  // 6. Sunan Ibn Majah
+  {
+    id: 601,
+    bookId: 'ibnmajah',
+    chapterId: 601,
+    hadithNumber: 224,
+    arabicText: 'طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ.',
+    banglaTranslation: 'দ্বীনি জ্ঞান অন্বেষণ করা প্রত্যেক মুসলমানের ওপর একান্ত ফরজ (আবশ্যকীয় কর্তব্য)।',
+    narrator: 'হযরত আনাস ইবনে মালিক (রা.)',
+    reference: 'সুনান ইবনে মাজাহ, হাদিস নং ২২৪',
+    grade: 'সহীহ'
+  },
+
+  // 7. Muwatta Malik
+  {
+    id: 701,
+    bookId: 'muwatta',
+    chapterId: 701,
+    hadithNumber: 1614,
+    arabicText: 'تَرَكْتُ فِيكُمْ أَمْرَيْنِ لَنْ تَضِلُّوا مَا تَمَسَّكْتُمْ بِهِمَا: كِتَابَ اللَّهِ وَسُنَّةَ نَبِيِّهِ.',
+    banglaTranslation: 'আমি তোমাদের মাঝে দুটি বিষয় রেখে যাচ্ছি; যতক্ষণ তোমরা তা শক্তভাবে ধারণ করে থাকবে, ততক্ষণ কখনোই পথভ্রষ্ট হবে না: আল্লাহর কিতাব (আল-কুরআন) এবং তাঁর নবীর সুন্নাহ (হাদিস)।',
+    narrator: 'হযরত মালিক ইবনে আনাস (মুরসাল)',
+    reference: 'মুয়াত্তা মালিক, হাদিস নং ১৬১৪',
+    grade: 'সহীহ'
+  },
+
+  // 8. Musnad Ahmad
+  {
+    id: 801,
+    bookId: 'musnad_ahmad',
+    chapterId: 801,
+    hadithNumber: 4,
+    arabicText: 'إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ، وَإِنَّ الْبِرَّ يَهْدِي إِلَى الْجَنَّةِ، وَإِنَّ الرَّجُلَ لَيَصْدُقُ حَتَّى يُكْتَبَ عِنْدَ اللَّهِ صِدِّيقًا.',
+    banglaTranslation: 'নিশ্চয়ই সততা মানুষকে পুণ্যের দিকে পরিচালিত করে, আর পুণ্য মানুষকে জান্নাতের দিকে নিয়ে যায়। একজন ব্যক্তি সত্য বলতে বলতে অবশেষে আল্লাহর দরবারে পরম সত্যবাদী (সিদ্দীক) হিসেবে লিপিবদ্ধ হন।',
+    narrator: 'হযরত আবদুল্লাহ ইবনে মাসউদ (রা.)',
+    reference: 'মুসনাদে আহমাদ, হাদিস নং ৪',
     grade: 'সহীহ'
   }
 ];

@@ -8,8 +8,9 @@ export const SearchScreen: React.FC = () => {
   const { navigateTo, settings } = useDeen();
   const [query, setQuery] = useState('');
   const [activeTab, setActiveTab] = useState<'all' | 'quran' | 'hadith'>('all');
+  const [selectedBook, setSelectedBook] = useState<string>('all');
 
-  const popularKeywords = ['নামাজ', 'রোজা', 'দান', 'ঈমান', 'হজ', 'জ্ঞান', 'তাওবা', 'সবর', 'নিয়ত'];
+  const popularKeywords = ['নামাজ', 'রোজা', 'দান', 'ঈমান', 'হজ', 'জ্ঞান', 'তাওবা', 'সবর', 'নিয়ত', 'পবিত্রতা'];
 
   // Search Quran
   const matchedSurahs = SURAH_LIST.filter(s =>
@@ -23,14 +24,16 @@ export const SearchScreen: React.FC = () => {
   );
 
   // Search Hadith
-  const matchedHadiths = HADITH_LIST.filter(h =>
-    query.trim() !== '' && (
+  const matchedHadiths = HADITH_LIST.filter(h => {
+    if (query.trim() === '') return false;
+    if (selectedBook !== 'all' && h.bookId !== selectedBook) return false;
+    return (
       h.banglaTranslation.toLowerCase().includes(query.toLowerCase()) ||
       h.narrator.toLowerCase().includes(query.toLowerCase()) ||
       h.reference.toLowerCase().includes(query.toLowerCase()) ||
       h.arabicText.includes(query)
-    )
-  );
+    );
+  });
 
   return (
     <div className="flex-1 p-3.5 space-y-4 pb-24 overflow-y-auto">
@@ -101,6 +104,35 @@ export const SearchScreen: React.FC = () => {
               }`}
             >
               {tab.label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Book Filter for Hadith */}
+      {query.trim() && (activeTab === 'hadith' || activeTab === 'all') && (
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+          <button
+            onClick={() => setSelectedBook('all')}
+            className={`px-2.5 py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all ${
+              selectedBook === 'all'
+                ? 'bg-teal-600 text-white shadow-sm'
+                : 'bg-slate-800 text-slate-300 hover:text-white'
+            }`}
+          >
+            সব হাদিস গ্রন্থ
+          </button>
+          {HADITH_BOOKS.map(b => (
+            <button
+              key={b.id}
+              onClick={() => setSelectedBook(b.id)}
+              className={`px-2.5 py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all ${
+                selectedBook === b.id
+                  ? 'bg-teal-600 text-white shadow-sm'
+                  : 'bg-slate-800/80 text-slate-300 hover:text-white'
+              }`}
+            >
+              {b.banglaName}
             </button>
           ))}
         </div>
