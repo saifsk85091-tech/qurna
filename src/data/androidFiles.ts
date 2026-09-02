@@ -2,6 +2,19 @@ import { CodeFile } from '../types';
 
 export const ANDROID_FILES: CodeFile[] = [
   {
+    id: 'gradle-properties',
+    name: 'gradle.properties',
+    path: 'gradle.properties',
+    category: 'gradle',
+    language: 'properties',
+    description: 'Gradle properties configuring AndroidX and JVM options',
+    content: `org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8
+android.useAndroidX=true
+android.enableJetifier=true
+kotlin.code.style=official
+android.nonTransitiveRClass=true`
+  },
+  {
     id: 'gradle-wrapper-properties',
     name: 'gradle-wrapper.properties',
     path: 'gradle/wrapper/gradle-wrapper.properties',
