@@ -5,7 +5,7 @@ export interface CodeFile {
   name: string;
   path: string;
   category: 'gradle' | 'manifest' | 'theme' | 'navigation' | 'ui' | 'res';
-  language: 'kotlin' | 'groovy' | 'xml' | 'toml';
+  language: 'kotlin' | 'groovy' | 'xml' | 'toml' | 'properties';
   content: string;
   description: string;
 }

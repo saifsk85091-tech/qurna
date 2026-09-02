@@ -2,6 +2,21 @@ import { CodeFile } from '../types';
 
 export const ANDROID_FILES: CodeFile[] = [
   {
+    id: 'gradle-wrapper-properties',
+    name: 'gradle-wrapper.properties',
+    path: 'gradle/wrapper/gradle-wrapper.properties',
+    category: 'gradle',
+    language: 'properties',
+    description: 'Gradle wrapper configuration specifying distribution URL',
+    content: `distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\\://services.gradle.org/distributions/gradle-8.9-all.zip
+networkTimeout=10000
+validateDistributionUrl=true
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists`
+  },
+  {
     id: 'settings-gradle',
     name: 'settings.gradle.kts',
     path: 'settings.gradle.kts',
