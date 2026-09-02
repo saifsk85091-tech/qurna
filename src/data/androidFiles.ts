@@ -1833,5 +1833,123 @@ class MainActivity : ComponentActivity() {
     <string name="app_name">Deen Library</string>
     <string name="app_tagline">Quran &amp; Hadith</string>
 </resources>`
+  },
+  {
+    id: 'themes-xml',
+    name: 'themes.xml',
+    path: 'app/src/main/res/values/themes.xml',
+    category: 'res',
+    language: 'xml',
+    description: 'Application theme definition',
+    content: `<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DeenLibrary" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>`
+  },
+  {
+    id: 'colors-xml',
+    name: 'colors.xml',
+    path: 'app/src/main/res/values/colors.xml',
+    category: 'res',
+    language: 'xml',
+    description: 'Color resources for themes and icons',
+    content: `<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0D5C3A</color>
+    <color name="primary_dark">#083D26</color>
+    <color name="accent">#D4AF37</color>
+    <color name="ic_launcher_background">#0D5C3A</color>
+</resources>`
+  },
+  {
+    id: 'backup-rules-xml',
+    name: 'backup_rules.xml',
+    path: 'app/src/main/res/xml/backup_rules.xml',
+    category: 'res',
+    language: 'xml',
+    description: 'Backup rules configuration',
+    content: `<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+</full-backup-content>`
+  },
+  {
+    id: 'data-extraction-rules-xml',
+    name: 'data_extraction_rules.xml',
+    path: 'app/src/main/res/xml/data_extraction_rules.xml',
+    category: 'res',
+    language: 'xml',
+    description: 'Data extraction rules for Android 12+',
+    content: `<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="root" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="root" />
+    </device-transfer>
+</data-extraction-rules>`
+  },
+  {
+    id: 'ic-launcher-xml',
+    name: 'ic_launcher.xml',
+    path: 'app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml',
+    category: 'res',
+    language: 'xml',
+    description: 'Adaptive launcher icon configuration',
+    content: `<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>`
+  },
+  {
+    id: 'ic-launcher-round-xml',
+    name: 'ic_launcher_round.xml',
+    path: 'app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml',
+    category: 'res',
+    language: 'xml',
+    description: 'Round adaptive launcher icon configuration',
+    content: `<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>`
+  },
+  {
+    id: 'ic-launcher-foreground-xml',
+    name: 'ic_launcher_foreground.xml',
+    path: 'app/src/main/res/drawable/ic_launcher_foreground.xml',
+    category: 'res',
+    language: 'xml',
+    description: 'Vector foreground for launcher icon',
+    content: `<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#D4AF37"
+        android:pathData="M30,30h48v48h-48z"/>
+</vector>`
+  },
+  {
+    id: 'ic-launcher-background-xml',
+    name: 'ic_launcher_background.xml',
+    path: 'app/src/main/res/drawable/ic_launcher_background.xml',
+    category: 'res',
+    language: 'xml',
+    description: 'Vector background for launcher icon',
+    content: `<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#0D5C3A"
+        android:pathData="M0,0h108v108h-108z"/>
+</vector>`
   }
 ];
