@@ -22,22 +22,21 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
-          gradle-version: '8.4'
+          gradle-version: '8.7'
 
-      - name: Ensure Gradle Wrapper Exists
+      - name: Ensure Android Files Extracted
         run: |
-          if [ ! -f "gradlew" ]; then
-            echo "Generating Gradle wrapper..."
-            gradle wrapper --gradle-version 8.4
+          if [ ! -f "settings.gradle.kts" ]; then
+            echo "Exporting Android files from repository..."
+            npm ci || npm install
+            npx tsx scripts/export-android.ts
           fi
-          chmod +x gradlew
 
       - name: Build Debug APK with Gradle
-        run: ./gradlew assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
 
       - name: Save APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/app-debug.apk
-
